@@ -26,12 +26,12 @@ Orchestrates the [Cursor Agent CLI](https://cursor.com/docs/cli/overview) (`agen
 
 ## Adding a skill
 
-Each skill lives in `skills/<name>/SKILL.md` with YAML frontmatter:
+Each skill lives in `skills/<category>/<name>/SKILL.md` with YAML frontmatter:
 
 ```yaml
 ---
 name: skill-name
-description: One-line description for Hermes skill discovery.
+description: One-line tool summary for Hermes skill discovery.
 version: 1.0.0
 author: Hermes Agent
 license: MIT
@@ -39,8 +39,12 @@ metadata:
   hermes:
     tags: [Tag1, Tag2]
     related_skills: [other-skill]
+prerequisites:
+  commands: [toolname]
 ---
 ```
+
+See `CLAUDE.md` for the full workflow, quality gate, and required sections. Score every skill with `references/skill_rubric.md` before committing.
 
 ## License
 
