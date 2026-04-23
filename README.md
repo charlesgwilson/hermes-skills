@@ -7,6 +7,7 @@ A personal collection of [Hermes Agent](https://github.com/NousResearch/hermes-a
 | Skill | Description |
 |-------|-------------|
 | [cursor-agent](skills/autonomous-ai-agents/cursor-agent/SKILL.md) | Delegate coding tasks to Cursor Agent CLI — build features, refactor, review PRs, run parallel agents |
+| [slack-cli](skills/communication/slack-cli/SKILL.md) | Personal Slack assistant — monitor unread messages, send and draft messages as the user, react and set reminders |
 
 ## Install
 
@@ -23,6 +24,12 @@ hermes skills install charlesgwilson/hermes-skills/autonomous-ai-agents/cursor-a
 Orchestrates the [Cursor Agent CLI](https://cursor.com/docs/cli/overview) (`agent` binary) from within Hermes. Supports one-shot print mode for automation and interactive PTY sessions via tmux for multi-turn work. Covers worktrees, parallel instances, PR review patterns, MCP integration, and cloud handoff.
 
 **Requires:** `agent` binary installed (`curl https://cursor.com/install -fsSL | bash`) and authenticated (`agent login` or `CURSOR_API_KEY`).
+
+### slack-cli
+
+Personal Slack assistant powered by [slackcli](https://github.com/shaharia-lab/slackcli). Monitor unread messages across channels and DMs, read thread history, send and draft messages as the user, add emoji reactions on request, and set follow-up reminders via apple-reminders.
+
+**Requires:** `slackcli` installed (`brew install shaharia-lab/slackcli/slackcli`) and authenticated with browser session tokens (`slackcli auth parse-curl --from-clipboard --login`).
 
 ## Adding a skill
 
